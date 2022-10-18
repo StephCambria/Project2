@@ -9,6 +9,10 @@
 // dotenv || npm i dotenv
 // bcrypt || npm i bcrypt
 
+// tailwind || npm i -D tailwindcss
+// npx tailwindcss init --> creates config file
+
+
 // ------------------------------------------
 
 const path = require("path");

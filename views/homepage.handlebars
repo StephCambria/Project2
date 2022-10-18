@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/public/css/dist/output.css" rel="stylesheet" />
+    <link href="/public/css/dist/style.css" rel="stylesheet" />
+  </head>
+  <body class="m-0 p-0">
+    <nav class="navbar">
+      <ul class="links-container">
+        <li class="link"><a href="/">Home</li>
+        <li class="link">
+          <a href="/dashboard">Check the Fridge!</a>
+        </li>
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <li class="link"><a href="#" id="logout-link">Logout</a></li>
+    {{else}}
+        <li class="link"><a href="/login">Login</a></li>
+      </ul>
+    </nav>
+
+    <div id="header"
+      class="bg-[url('https://source.unsplash.com/featured/1600x1400?food')] object-none p-20 bg-no-repeat"
+    >
+      <h1 class="text-center flex flex-col justify-center">
+        <lead id="heading" class="text-6xl font-semibold">What's</lead>
+
+        <lead id="heading-small" class="italic text-3xl">in the</lead>
+
+        <lead id="heading-nofill" class="text-6xl font-extrabold italic">Fridge?</lead>
+      </h1>
+    </div>
+    <main class="container mx-auto>
+      <!-- Render the sub layout -->
+      {{{ body }}}
+    </main>
+    <footer>
+      
+    </footer>
+  </div>
+
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+  </body>
+</html>
