@@ -195,7 +195,7 @@ textarea {
   /* 1 */
   margin: 0;
   /* 2 */
-  padding: 0;
+  padding: 3px;
   /* 3 */
 }
 
@@ -219,7 +219,10 @@ button,
 [type='submit'] {
   -webkit-appearance: button;
   /* 1 */
-  background-color: transparent;
+  background-color: #2dd4bf;
+  color:#fff;
+  border-radius: 2rem;
+  padding: 0.5rem;
   /* 2 */
   background-image: none;
   /* 2 */
@@ -655,4 +658,30 @@ video {
 
 .leading-3 {
   line-height: .75rem;
+}
+
+.container {
+  width: 50px;
+  justify-content:flex-end;
+  position: relative;
+}
+
+.h2login {
+  margin-bottom: 20px;
+  margin-left: 8px;
+}
+
+.form {
+  padding: 10px;
+}
+
+.btn-container {
+  margin-top: 20px;
+}
+
+.alt-btncontainer {
+  display: inline-flex;
+  position: absolute;
+  margin-left: 60%;
+  margin-bottom: 60px;
 }

@@ -3,73 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>What's in the Fridge?</title>
     <link href="/public/css/dist/output.css" rel="stylesheet" />
-   <link href="/public/css/dist/style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-
-    <script>
-      $( function() {
-        $( "#sortable" ).sortable({
-          revert: true
-        });
-        $( "#draggable" ).draggable({
-          connectToSortable: "#sortable",
-          helper: "clone",
-          revert: "invalid"
-        });
-        $( "ul, li" ).disableSelection();
-      } );
-      </script>
+    <link href="/public/css/dist/style.css" rel="stylesheet" />
   </head>
   <body class="m-0 p-0">
-    <nav class="navbar w-100 h-100 flex align-middle justify-evenly p-5 z-10">
-      <ul class="links-container flex list-none">
-        <li class="link text-teal-500 ml-10 p-10"><a href="/">Home</li>
-        <li class="link text-teal-500 ml-10 p-10">
+    <nav class="navbar">
+      <ul class="links-container">
+        <li class="link"><a href="/">Home</li>
+        <li class="link">
           <a href="/main">Check the Fridge!</a>
         </li>
         <li class="link text-teal-500 ml-10 p-10">
+          <a href="/grocery">Grocery List</a>
+        </li>
+        <li class="link">
           <a href="/dashboard">Cutting Board</a>
         </li>
 
-        <li class="link text-teal-500 ml-10 p-10"><a href="#" id="logout-link">Logout</a></li>
 
-        <li class="link text-teal-500 ml-10 p-10"><a href="/login">Login</a></li>
+        <li class="link"><a href="#" id="logout-link">Logout</a></li>
+
+        <li class="link"><a href="/login">Login</a></li>
       </ul>
     </nav>
 
-<header>
-    <div id="header"
-      class="bg-[url('https://source.unsplash.com/featured/1600x1400?food')] object-none p-20 bg-no-repeat mb-20"
-    >
-      <h1 class="text-center flex flex-col justify-center">
-        <lead id="heading" class="text-6xl font-semibold mb-10">Welcome</lead>
+    <header>
+      <div id="header"
+        class="bg-[url('https://source.unsplash.com/featured/1600x1400?food')] object-none p-20 bg-no-repeat mb-20"
+      >
+        <h1 class="text-center flex flex-col justify-center">
+  
+          <lead id="heading-nofill" class="text-6xl font-extrabold italic">Login</lead>
+        </h1>
+      </div>
+    </header>
 
-        <lead id="heading-small" class="italic text-3xl mb-10">to the</lead>
+    <main class="m-30 p-20">
 
-        <lead id="heading-nofill" class="text-6xl font-extrabold italic">Cutting Board</lead>
-      </h1>
-    </div>
-  </header>
+      <container class="container">
+      <div class="m-10 p-10">
+        <h2 class="text-3xl h2login">Login:</h2>
+        <div class="form">
+          <label for="username">Username:</label>
+          <input class="form-input" id="username-login"
+            name="username"
+            type="text"
+            placeholder="Enter Username"
+            id="username-field"
+          />
+        </div>
+        <div class="form">
+          <label for="password">Password:</label>
+          <input class="form-input border-2" id="password-login"
+            name="password"
+            type="password"
+            placeholder="Enter Password"
+            id="password-field"
+          />
+        </div>
+        
+        <div class="btn-container">
+        <button class="font-semibold text-teal-500" id="login-btn" type="submit">Login</button>
+      </div>
+    </container>
 
-    <br>
-    
-      <!-- Render the sub layout -->
-<main class="m-30 p-20">
+      </div>
 
-  </main>
+    </main>
 
-  <br>
-
-    <footer>
-      
-    </footer>
-
-
-  <!-- Render script for logged in users only -->
+    <footer></footer>
 
   <script src="/js/logout.js"></script>
 
