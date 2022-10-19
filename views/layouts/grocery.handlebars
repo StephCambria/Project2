@@ -1,4 +1,3 @@
-<!-- main will be the "fridge", or what you currently have or have to get -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -50,11 +49,9 @@
       class="bg-[url('https://source.unsplash.com/featured/1600x1400?food')] object-none p-20 bg-no-repeat mb-20"
     >
       <h1 class="text-center flex flex-col justify-center">
-        <lead id="heading" class="text-6xl font-semibold mb-10">Welcome</lead>
+        <lead id="heading" class="text-6xl font-semibold mb-10">Grocery</lead>
 
-        <lead id="heading-small" class="italic text-3xl mb-10">to your</lead>
-
-        <lead id="heading-nofill" class="text-6xl font-extrabold italic">Fridge</lead>
+        <lead id="heading-nofill" class="text-6xl font-extrabold italic mt-10">List</lead>
       </h1>
     </div>
   </header>
@@ -63,27 +60,33 @@
     
       <!-- Render the sub layout -->
 <main class="m-30 p-20">
-<div id="listContainer" class="flex flex-col">
-  <h3 class="font-semibold mt-10 p-5">Welcome back to your fridge!
+        <!-- Render the sub layout -->
+<main class="m-30 p-20">
+  <div id="listContainer" class="flex flex-col">
+    <h3 class="font-semibold mt-10 p-5">Welcome to your grocery list!
+      <br>
+      Here you can view and sort through everything you need to get.</h3>
+    
     <br>
-    Here you can view and sort through everything you currently have at home.</h3>
   
-  <br>
-
-  <p class="font-medium mt-10 p-5">Click and drag each item to organize them.</p>
-
-  <br>
-
-      <div>
-        <ul id="sortable" class="box-border h-32 p-1 m-20">
-          <li id="listItem" class="ui-state-default">Item 1</li>
-          <li id="listItem" class="ui-state-default">Item 2</li>
-          <li id="listItem" class="ui-state-default">Item 3</li>
-          <li id="listItem" class="ui-state-default">Item 4</li>
-          <li id="listItem" class="ui-state-default">Item 5</li>
-        </ul>
+    <p class="font-medium mt-10 p-5">Click and drag each item to organize them.</p>
+  
+    <br>
+  
+        <div>
+          <ul id="sortable" class="box-border h-32 p-1 m-20">
+            <li id="listItem" class="ui-state-default">Item 1</li>
+            <li id="listItem" class="ui-state-default">Item 2</li>
+            <li id="listItem" class="ui-state-default">Item 3</li>
+            <li id="listItem" class="ui-state-default">Item 4</li>
+            <li id="listItem" class="ui-state-default">Item 5</li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </main>
+  
+    <br>
+
   </main>
 
   <br>
