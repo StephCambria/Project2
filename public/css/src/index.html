@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>What's in the Fridge?</title>
+    <link href="/public/css/dist/output.css" rel="stylesheet" />
+   <link href="/public/css/dist/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <link href="/public/css/dist/output.css" rel="stylesheet" />
-    <link href="/public/css/dist/style.css" rel="stylesheet" />
+
     <script>
       $( function() {
         $( "#sortable" ).sortable({
@@ -24,50 +25,44 @@
       </script>
   </head>
   <body class="m-0 p-0">
-    <nav class="navbar">
-      <ul class="links-container">
-        <li class="link"><a href="/">Home</li>
-        <li class="link">
+    <nav class="navbar w-100 h-100 flex align-middle justify-evenly p-5 z-10">
+      <ul class="links-container flex list-none">
+        <li class="link text-teal-500 ml-10 p-10"><a href="/">Home</li>
+        <li class="link text-teal-500 ml-10 p-10">
           <a href="/main">Check the Fridge!</a>
         </li>
-        <li class="link">
+        <li class="link text-teal-500 ml-10 p-10">
           <a href="/dashboard">Cutting Board</a>
         </li>
 
-        <li class="link"><a href="#" id="logout-link">Logout</a></li>
+        <li class="link text-teal-500 ml-10 p-10"><a href="#" id="logout-link">Logout</a></li>
 
-        <li class="link"><a href="/login">Login</a></li>
+        <li class="link text-teal-500 ml-10 p-10"><a href="/login">Login</a></li>
       </ul>
     </nav>
 
+<header>
     <div id="header"
-      class="bg-[url('https://source.unsplash.com/featured/1600x1400?food')] object-none p-20 bg-no-repeat"
+      class="bg-[url('https://source.unsplash.com/featured/1600x1400?food')] object-none p-20 bg-no-repeat mb-20"
     >
       <h1 class="text-center flex flex-col justify-center">
-        <lead id="heading" class="text-6xl font-semibold">Welcome</lead>
+        <lead id="heading" class="text-6xl font-semibold mb-10">Welcome</lead>
 
-        <lead id="heading-small" class="italic text-3xl">to the</lead>
+        <lead id="heading-small" class="italic text-3xl mb-10">to the</lead>
 
         <lead id="heading-nofill" class="text-6xl font-extrabold italic">Cutting Board</lead>
       </h1>
     </div>
+  </header>
+
+    <br>
     
       <!-- Render the sub layout -->
-<div class="flex flex-col">
-  <lead>Here is your cutting board, where you can view and sort through recipies and meal plans that you have saved.</lead>
+<main class="m-30 p-20">
 
+  </main>
 
-      <div class="">
-        <ul id="sortable">
-          <li class="ui-state-default">Item 1</li>
-          <li class="ui-state-default">Item 2</li>
-          <li class="ui-state-default">Item 3</li>
-          <li class="ui-state-default">Item 4</li>
-          <li class="ui-state-default">Item 5</li>
-        </ul>
-      </div>
-    </div>
-      
+  <br>
 
     <footer>
       

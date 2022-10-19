@@ -65,3 +65,20 @@
     font-size: 110px;
     line-height: 60px;
   }
+
+  #listContainer {
+    width: 80%;
+  }
+
+  h3 {
+    word-wrap: break-word;
+  }
+
+  #sortable {
+    width: 30%;
+    cursor: pointer;
+  }
+
+  #listItem {
+    padding: 10px;
+  }
