@@ -1,5 +1,48 @@
-<div class="m-10 p-10 justify-center">
-        <h2 class="text-lg text-teal-700">Login:</h2>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/public/css/dist/output.css" rel="stylesheet" />
+    <link href="/public/css/dist/style.css" rel="stylesheet" />
+  </head>
+  <body class="m-0 p-0">
+    <nav class="navbar">
+      <ul class="links-container">
+        <li class="link"><a href="/">Home</li>
+        <li class="link">
+          <a href="/main">Check the Fridge!</a>
+        </li>
+        <li class="link text-teal-500 ml-10 p-10">
+          <a href="/grocery">Grocery List</a>
+        </li>
+        <li class="link">
+          <a href="/dashboard">Cutting Board</a>
+        </li>
+
+
+        <li class="link"><a href="#" id="logout-link">Logout</a></li>
+
+        <li class="link"><a href="/login">Login</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <div id="header"
+        class="bg-[url('https://source.unsplash.com/featured/1600x1400?food')] object-none p-20 bg-no-repeat mb-20"
+      >
+        <h1 class="text-center flex flex-col justify-center">
+  
+          <lead id="heading-nofill" class="text-6xl font-extrabold italic">Login</lead>
+        </h1>
+      </div>
+    </header>
+
+    <main class="m-30 p-20">
+
+      <container class="container">
+      <div class="m-10 p-10">
+        <h2 class="text-3xl h2login">Login:</h2>
         <div class="form">
           <label for="username">Username:</label>
           <input class="form-input" id="username-login"
@@ -11,17 +54,29 @@
         </div>
         <div class="form">
           <label for="password">Password:</label>
-          <input class="form-input" id="password-login"
+          <input class="form-input border-2" id="password-login"
             name="password"
             type="password"
             placeholder="Enter Password"
             id="password-field"
           />
         </div>
-        <button class="" id="login-btn" type="submit">Login</button>
-        <button class="" type="submit"><a href="/signup" id="signupLink">Sign Up</a></button>
+        
+        <div class="btn-container">
+        <button class="font-semibold text-teal-500" id="login-btn" type="submit">Login</button>
+      </div>
+    </container>
 
       </div>
+
+    </main>
+
+    <footer></footer>
+
+  <script src="/js/logout.js"></script>
+
+  </body>
+</html>
 
 
 <script src="./js/login.js"></script>
