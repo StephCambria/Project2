@@ -1,5 +1,13 @@
 const User = require('./User');
+const Recipe = require('./Recipe');
+const Food = require('./Food');
 
-// TODO: what other models do we need?
+Food.hasMany(Recipe, {
+    foreignKey: 'recipe_id'
+});
 
-module.exports = { User,};
+Recipe.belongsTo(Food, {
+    foreignKey: 'food_id'
+});
+
+module.exports = { User, Recipe, Food };
