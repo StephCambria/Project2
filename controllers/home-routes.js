@@ -27,20 +27,11 @@ router.get("/login", (req, res) => {
     return;
   }
 
-  
+  res.render("login");
 });
 
 //-----------------------------------------
 
-router.get('/', async (req, res) => {
-  try {
-    const dbgroceryData = await Grocery.findAll({
-      include: [
-        {
-          model: Grocery,
-          attributes: ['filename', 'description'],
-        },
-      ],
-    });
+
 
 module.exports = router;
