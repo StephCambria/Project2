@@ -11,7 +11,7 @@ router.get("/", withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
 
-    res.render("/", {
+    res.render("/homepage", {
       ...user,
       logged_in: true,
     });
