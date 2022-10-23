@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Food } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.post('/main', withAuth, async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   try {
     const newFood = await Food.create({
       ...req.body,

@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Grocery } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.post('/grocery', withAuth, async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
     try {
       const newGrocery = await Grocery.create({
         ...req.body,
@@ -15,7 +15,14 @@ router.post('/grocery', withAuth, async (req, res) => {
     }
   });
 
- 
+  router.get('/', (req,send) => {
+    res.send('home')
+  });
+
+  router.get('/grocery',(req,res) => {
+    res.send ('grocery')
+  });
+
 router.delete('/:id', withAuth, async (req, res) => {
     try {
       const groceryData = await Grocery.destroy({

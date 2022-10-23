@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Fridge } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.post('/', withAuth, async (req, res) => {
+router.post('/main', withAuth, async (req, res) => {
   try {
     const newFridge = await Fridge.create({
       ...req.body,
