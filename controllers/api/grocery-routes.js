@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Grocery } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.post('/', withAuth, async (req, res) => {
+router.post('/grocery', withAuth, async (req, res) => {
     try {
       const newGrocery = await Grocery.create({
         ...req.body,
