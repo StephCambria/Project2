@@ -1,9 +1,9 @@
 const router = require('express').Router();
-const userRoutes = require('./user-routes.js');
-const fridgeRoutes = require('./fridge-routes.js');
-const groceryRoutes = require('./grocery-routes');
-const recipeRoutes = require('./recipe-routes');
-const foodRoutes = require('./food-routes');
+import userRoutes from './user-routes.js';
+import fridgeRoutes from './fridge-routes.js';
+import groceryRoutes from './grocery-routes';
+import recipeRoutes from './recipe-routes';
+import foodRoutes from './food-routes';
 
 router.use('/user', userRoutes);
 router.use('/fridge', fridgeRoutes);
@@ -11,4 +11,4 @@ router.use('/grocery', groceryRoutes);
 router.use('/recipe', recipeRoutes);
 router.use('/food', foodRoutes);
 
-module.exports = router;
+export default router;
