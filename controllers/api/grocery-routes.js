@@ -9,19 +9,16 @@ router.post('/', withAuth, async (req, res) => {
         user_id: req.session.user_id,
       });
   
+
       res.status(200).json(newGrocery)
     } catch (err) {
       res.status(400).json(err);
     }
   });
 
-  router.get('/', (req,send) => {
-    res.send('home')
-  });
-
-  router.get('/grocery',(req,res) => {
-    res.send ('grocery')
-  });
+router.get('/', async (req,res) =>{
+  res.render('grocery')
+})
 
 router.delete('/:id', withAuth, async (req, res) => {
     try {

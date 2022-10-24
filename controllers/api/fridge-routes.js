@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Fridge } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.post('/main', withAuth, async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   try {
     const newFridge = await Fridge.create({
       ...req.body,
@@ -13,6 +13,10 @@ router.post('/main', withAuth, async (req, res) => {
   } catch (err) {
     res.status(400).json(err);
   }
+});
+
+router.get('/', async(req, res) => {
+  res.render('main', {title: "Fridge"});
 });
 
 router.delete('/:id', withAuth, async (req, res) => {
