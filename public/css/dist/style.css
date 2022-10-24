@@ -66,9 +66,10 @@
     line-height: 60px;
   }
 
-  #listContainer {
-    width: 80%;
-  }
+ main {
+  width: 100vh;
+  height: 100vh;
+ }
 
   h3 {
     word-wrap: break-word;
@@ -83,4 +84,6 @@
     padding: 10px;
   }
 
- 
+ #signup-btn {
+    width: 80px;
+ }

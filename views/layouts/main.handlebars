@@ -1,34 +1,13 @@
-<!-- main will be the "fridge", or what you currently have or have to get -->
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>What's in the Fridge?</title>
     <link href="./css/dist/output.css" rel="stylesheet" />
     <link href="./css/dist/style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="/js/index.js"></script>
-
-    <script>
-      $( function() {
-        $( "#sortable" ).sortable({
-          revert: true
-        });
-        $( "#draggable" ).draggable({
-          connectToSortable: "#sortable",
-          helper: "clone",
-          revert: "invalid"
-        });
-        $( "ul, li" ).disableSelection();
-      } );
-      </script>
   </head>
   <body class="m-0 p-0">
-    <nav class="navbar w-100 h-100 flex align-middle justify-evenly p-5 z-10">
+    <nav class="navbar">
       <ul class="links-container">
         <li class="link" id="home-link"><a href="/">Home</li>
         <li class="link" id="fridge-link">
@@ -50,58 +29,29 @@
       </ul>
     </nav>
 
-<header>
     <div id="header"
-      class="bg-[url('https://source.unsplash.com/featured/1600x1400?food')] object-none p-20 bg-no-repeat mb-20"
+      class="bg-[url('https://source.unsplash.com/featured/1600x1400?food')] object-none p-20 bg-no-repeat"
     >
       <h1 class="text-center flex flex-col justify-center">
-        <lead id="heading" class="text-6xl font-semibold mb-10">Welcome</lead>
+        <lead id="heading" class="text-6xl font-semibold">What's</lead>
 
-        <lead id="heading-small" class="italic text-3xl mb-10">to your</lead>
+        <lead id="heading-small" class="italic text-3xl">in the</lead>
 
-        <lead id="heading-nofill" class="text-6xl font-extrabold italic">Fridge</lead>
+        <lead id="heading-nofill" class="text-6xl font-extrabold italic">Fridge?</lead>
       </h1>
     </div>
-  </header>
-
-    <br>
-    
+    <main class="container mx-auto>
       <!-- Render the sub layout -->
-<main class="m-30 p-20">
-<div id="listContainer" class="flex flex-col">
-  <h3 class="font-semibold mt-10 p-5">Welcome back to your fridge!
-    <br>
-    Here you can view and sort through everything you currently have at home.</h3>
-  
-  <br>
-
-  <p class="font-medium mt-10 p-5">Click and drag each item to organize them.</p>
-
-  <br>
-
-      <div>
-        <ul id="sortable" class="box-border h-32 p-1 m-20">
-          <li id="listItem" class="ui-state-default">Item 1</li>
-          <li id="listItem" class="ui-state-default">Item 2</li>
-          <li id="listItem" class="ui-state-default">Item 3</li>
-          <li id="listItem" class="ui-state-default">Item 4</li>
-          <li id="listItem" class="ui-state-default">Item 5</li>
-        </ul>
-      </div>
-    </div>
-  </main>
-
-  <br>
-
+      {{{ body }}}
+    </main>
     <footer>
       
     </footer>
-
+  </div>
 
   <!-- Render script for logged in users only -->
-{{#if logged_in}}
+  {{#if logged_in}}
   <script src="/js/logout.js"></script>
-{{/if}}
-
+  {{/if}}
   </body>
 </html>
