@@ -1,16 +1,16 @@
-<!-- main will be the "fridge", or what you currently have or have to get -->
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>What's in the Fridge?</title>
-    <link href="./css/dist/output.css" rel="stylesheet" />
-   <link href="./css/dist/style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-
+    <script>
+      $( function() {
+        $( "#sortable" ).sortable({
+          revert: true
+        });
+        $( "#draggable" ).draggable({
+          connectToSortable: "#sortable",
+          helper: "clone",
+          revert: "invalid"
+        });
+        $( "ul, li" ).disableSelection();
+      } );
+      </script>
   </head>
   <body class="m-0 p-0">
     <nav class="navbar w-100 h-100 flex align-middle justify-evenly p-5 z-10">
@@ -48,6 +48,34 @@
     </div>
   </header>
 
+    <br>
+    
+      <!-- Render the sub layout -->
+<main class="m-30 p-20">
+<div id="listContainer" class="flex flex-col">
+  <h3 class="font-semibold mt-10 p-5">Welcome back to your fridge!
+    <br>
+    Here you can view and sort through everything you currently have at home.</h3>
+  
+  <br>
+
+  <p class="font-medium mt-10 p-5">Click and drag each item to organize them.</p>
+
+  <br>
+
+      <div>
+        <ul id="sortable" class="box-border h-32 p-1 m-20">
+          <li id="listItem" class="ui-state-default">Item 1</li>
+          <li id="listItem" class="ui-state-default">Item 2</li>
+          <li id="listItem" class="ui-state-default">Item 3</li>
+          <li id="listItem" class="ui-state-default">Item 4</li>
+          <li id="listItem" class="ui-state-default">Item 5</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <br>
 
     <footer>
       
