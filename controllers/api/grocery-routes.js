@@ -15,9 +15,7 @@ router.post('/', withAuth, async (req, res) => {
     }
   });
 
-router.get('/', async (req, res) => {
-  res.render('grocery');
-});  
+
 
 router.delete('/:id', withAuth, async (req, res) => {
     try {
