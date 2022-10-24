@@ -46,7 +46,11 @@
     </main>
     <footer>
       
-      <div class="col-7">
+
+
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+        <div class="col-7">
         <section class="">
           <header class="text-center">
             <h2 class="">
@@ -66,13 +70,12 @@
         
     </footer>
   </div>
-
-  <!-- Render script for logged in users only -->
-  {{#if logged_in}}
+  
   <script src="/js/logout.js"></script>
+  <script src="/js/recipe.js"></script>
   {{/if}}
 
-  <script src="/public/js/recipe.js"></script>
-  
+ 
+
   </body>
 </html>
