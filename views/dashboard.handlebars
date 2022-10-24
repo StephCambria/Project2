@@ -5,23 +5,6 @@
     <title>What's in the Fridge?</title>
     <link href="./css/dist/output.css" rel="stylesheet" />
    <link href="./css/dist/style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-
-    <script>
-      $( function() {
-        $( "#sortable" ).sortable({
-          revert: true
-        });
-        $( "#draggable" ).draggable({
-          connectToSortable: "#sortable",
-          helper: "clone",
-          revert: "invalid"
-        });
-        $( "ul, li" ).disableSelection();
-      } );
-      </script>
   </head>
 
   
@@ -60,46 +43,42 @@
   
   <br>
 
-  <p class="font-medium mt-10 p-5">Click and drag each item to organize them.</p>
 
   <br>
-
       <div>
-        <ul id="sortable" class="box-border h-32 p-1 m-20">
-          <li id="listItem" class="ui-state-default">Item 1</li>
-          <li id="listItem" class="ui-state-default">Item 2</li>
-          <li id="listItem" class="ui-state-default">Item 3</li>
-          <li id="listItem" class="ui-state-default">Item 4</li>
-          <li id="listItem" class="ui-state-default">Item 5</li>
-        </ul>
-      </div>
-    </div>
-  </main>
-
-  <br>
-
-    <footer>
-      <div class="col-7">
-          <section class="">
-            <header class="text-center">
-              <h2 class="">
+          <section>
+            <header class="text-center m-10 p-10">
+              <h2 class="font-medium mt-10 p-5">
                 Click the button below to generate a random recipe!
               </h2>
             </header>
             <div class="justify-center text-center">
-              <div class="col-8 mb-3">
-                <button class="" id="fetch-button">
+              <div>
+                <br>
+                <button class="p-10 m-10" id="fetch-button">
                   Random Recipe
                 </button>
+                <br>
               </div>
-              <img class="image" src="" alt="Recipe">
+              <br>
+              <div class="ml-30">
+              <img class="image p-10 m-10" src="" alt="Recipe">
+              </div>
+              <br>
               <h2 class="title"></h2>
+              <br>
               <p> 
                 <a class="spoonacularSourceUrl" href="">Click here for the full recipe.</a>
               </p>
             </div>
           </section>
         </div>
+  </main>
+
+  <br>
+
+    <footer>
+
     </footer>
       
 
@@ -108,5 +87,6 @@
 {{#if logged_in}}
   <script src="/js/logout.js"></script>
 {{/if}}
+ <script src="/js/recipe.js"></script>
 
   </body>
