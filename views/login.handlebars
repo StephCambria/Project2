@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./css/dist/output.css" rel="stylesheet" />
     <link href="./css/dist/style.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="/js/index.js"></script>
   </head>
   <body class="m-0 p-0">
     <nav class="navbar">
@@ -25,6 +27,7 @@
     {{else}}
         <li class="link" id="login-link"><a href="/login">Login</a></li>
         <li class="link" id="signup-link"><a href="/signup">Sign Up!</a></li>
+      {{/if}}
       </ul>
     </nav>
 
@@ -73,10 +76,10 @@
     </main>
 
     <footer></footer>
-
+{{#if logged_in}}
   <script src="/js/logout.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="/js/index.js"></script>
+{{/if}}
+
 
   </body>
 </html>

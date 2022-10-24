@@ -43,6 +43,7 @@
     {{else}}
         <li class="link" id="login-link"><a href="/login">Login</a></li>
         <li class="link" id="signup-link"><a href="/signup">Sign Up!</a></li>
+      {{/if}}
       </ul>
     </nav>
 
@@ -99,8 +100,9 @@
 
 
   <!-- Render script for logged in users only -->
-
+{{#if logged_in}}
   <script src="/js/logout.js"></script>
+{{/if}}
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="/js/index.js"></script>
 

@@ -1,3 +1,14 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <link href="./css/dist/output.css" rel="stylesheet" />
+   <link href="./css/dist/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
     <script>
       $( function() {
         $( "#sortable" ).sortable({
@@ -12,6 +23,8 @@
       } );
       </script>
   </head>
+
+
   <body class="m-0 p-0">
     <nav class="navbar w-100 h-100 flex align-middle justify-evenly p-5 z-10">
       <ul class="links-container">
@@ -31,6 +44,7 @@
     {{else}}
         <li class="link" id="login-link"><a href="/login">Login</a></li>
         <li class="link" id="signup-link"><a href="/signup">Sign Up!</a></li>
+      {{/if}}
       </ul>
     </nav>
 
@@ -83,11 +97,9 @@
 
 
   <!-- Render script for logged in users only -->
-
+{{#if logged_in}}
   <script src="/js/logout.js"></script>
-
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="/js/index.js"></script>
+{{/if}}
 
   </body>
 </html>

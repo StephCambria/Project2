@@ -1,6 +1,4 @@
 <!-- the dashboard can be the "cutting board" of sorts? -->
-<!DOCTYPE html>
-<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,10 +22,9 @@
         $( "ul, li" ).disableSelection();
       } );
       </script>
-
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="/js/index.js"></script>
   </head>
+
+  
   <body class="m-0 p-0">
     <nav class="navbar w-100 h-100 flex align-middle justify-evenly p-5 z-10">
       <ul class="links-container">
@@ -44,10 +41,10 @@
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
         <li class="link"><a href="#" id="logout-link">Logout</a></li>
-    {{/if}}
+        {{else}}
         <li class="link" id="login-link"><a href="/login">Login</a></li>
         <li class="link" id="signup-link"><a href="/signup">Sign Up!</a></li>
-        
+        {{/if}}
       </ul>
     </nav>
 
@@ -103,5 +100,7 @@
 {{#if logged_in}}
   <script src="/js/logout.js"></script>
 {{/if}}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="/js/index.js"></script>
+
   </body>
-</html>
