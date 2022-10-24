@@ -1,9 +1,7 @@
 # What's in the Fridge?
 ![License Badge](https://shields.io/badge/license-ISC-green)
 
-<img width="1664" alt="Screen Shot 2022-10-24 at 5 45 43 PM" src="https://user-images.githubusercontent.com/107421370/197635956-d5c38d3a-3524-442f-8b19-7b69ad41a74f.png">
-
-
+<img width="1666" alt="Screen Shot 2022-10-24 at 6 20 01 PM" src="https://user-images.githubusercontent.com/107421370/197640746-e939b326-ee48-4496-a1b2-f677501573b5.png">
 
 
 ## Table of Contents
