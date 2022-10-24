@@ -15,8 +15,8 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
-router.get('/', async(req, res) => {
-  res.render('main', {title: "Fridge"});
+router.get('/', async (req,res) => {
+  res.render('main');
 });
 
 router.delete('/:id', withAuth, async (req, res) => {

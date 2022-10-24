@@ -8,7 +8,6 @@ router.post('/', withAuth, async (req, res) => {
         ...req.body,
         user_id: req.session.user_id,
       });
-  
 
       res.status(200).json(newGrocery)
     } catch (err) {
@@ -16,9 +15,9 @@ router.post('/', withAuth, async (req, res) => {
     }
   });
 
-router.get('/', async (req,res) =>{
-  res.render('grocery')
-})
+router.get('/', async (req, res) => {
+  res.render('grocery');
+});  
 
 router.delete('/:id', withAuth, async (req, res) => {
     try {

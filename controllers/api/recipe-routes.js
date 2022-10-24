@@ -15,6 +15,10 @@ router.post('/dashboard', withAuth, async (req, res) => {
   }
 });
 
+router.get('/', async (req,res) => {
+  res.render('dashboard');
+});
+
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const recipeData = await Recipe.destroy({
