@@ -11,6 +11,19 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
+    <script>
+      $( function() {
+        $( "#sortable" ).sortable({
+          revert: true
+        });
+        $( "#draggable" ).draggable({
+          connectToSortable: "#sortable",
+          helper: "clone",
+          revert: "invalid"
+        });
+        $( "ul, li" ).disableSelection();
+      } );
+      </script>
   </head>
   <body class="m-0 p-0">
     <nav class="navbar w-100 h-100 flex align-middle justify-evenly p-5 z-10">
@@ -23,14 +36,12 @@
           <a href="/grocery">Grocery List</a>
         </li>
         <li class="link text-teal-500 ml-10 p-10">
-          <a href="/recipe">Cutting Board</a>
+          <a href="/dashboard">Cutting Board</a>
         </li>
 
         <li class="link text-teal-500 ml-10 p-10"><a href="#" id="logout-link">Logout</a></li>
 
         <li class="link text-teal-500 ml-10 p-10"><a href="/login">Login</a></li>
-
-        <li class="link"><a href="/signup">Sign Up!</a></li>
       </ul>
     </nav>
 
@@ -48,6 +59,34 @@
     </div>
   </header>
 
+    <br>
+    
+      <!-- Render the sub layout -->
+<main class="m-30 p-20">
+<div id="listContainer" class="flex flex-col">
+  <h3 class="font-semibold mt-10 p-5">Welcome back to your fridge!
+    <br>
+    Here you can view and sort through everything you currently have at home.</h3>
+  
+  <br>
+
+  <p class="font-medium mt-10 p-5">Click and drag each item to organize them.</p>
+
+  <br>
+
+      <div>
+        <ul id="sortable" class="box-border h-32 p-1 m-20">
+          <li id="listItem" class="ui-state-default">Item 1</li>
+          <li id="listItem" class="ui-state-default">Item 2</li>
+          <li id="listItem" class="ui-state-default">Item 3</li>
+          <li id="listItem" class="ui-state-default">Item 4</li>
+          <li id="listItem" class="ui-state-default">Item 5</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <br>
 
     <footer>
       

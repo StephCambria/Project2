@@ -33,5 +33,33 @@ router.get("/login", (req, res) => {
 //-----------------------------------------
 
 
+router.get("/", async (req, res) => {
+  return res.render ("homepage");
+});
+
+router.get("/home", async (req, res) => {
+  return res.render("homepage");
+});
+
+router.get("/fridge", async (req, res) => {
+  return res.render ("fridge");
+});
+
+router.get("/grocery", async (req, res) => {
+  return res.render ("grocery");
+});
+
+router.get("/recipe", async (req, res) => {
+  return res.render ("recipe");
+});
+
+router.get("/login", async (req, res) => {
+  return res.render ("login");
+});
+
+router.get("/signup", async (req, res) => {
+  return res.render ("signup");
+});
+
 
 module.exports = router;
