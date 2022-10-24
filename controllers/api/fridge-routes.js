@@ -15,6 +15,10 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+router.get('/', async (req,res) => {
+  res.render('main');
+});
+
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const fridgeData = await Fridge.destroy({

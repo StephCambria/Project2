@@ -11,7 +11,7 @@ router.get("/", withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
 
-    res.render("/", {
+    res.render("homepage", {
       ...user,
       logged_in: true,
     });
@@ -23,7 +23,7 @@ router.get("/", withAuth, async (req, res) => {
 router.get("/login", (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect("/main");
+    res.redirect("/");
     return;
   }
 
@@ -32,29 +32,33 @@ router.get("/login", (req, res) => {
 
 //-----------------------------------------
 
-router.get('/', async (req, res) => {
-  try {
-    const dbgroceryData = await Grocery.findAll({
-      include: [
-        {
-          model: Grocery,
-          attributes: ['filename', 'description'],
-        },
-      ],
-    });
 
-    const galleries = dbGalleryData.map((gallery) =>
-      gallery.get({ plain: true })
-    );
+router.get("/", async (req, res) => {
+  return res.render ("homepage");
+});
 
-    res.render('homepage', {
-      galleries,
-      loggedIn: req.session.loggedIn,
-    });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
+router.get("/home", async (req, res) => {
+  return res.render("homepage");
+});
+
+router.get("/fridge", async (req, res) => {
+  return res.render ("fridge");
+});
+
+router.get("/grocery", async (req, res) => {
+  return res.render ("grocery");
+});
+
+router.get("/dashboard", async (req, res) => {
+  return res.render ("dashboard");
+});
+
+router.get("/login", async (req, res) => {
+  return res.render ("login");
+});
+
+router.get("/signup", async (req, res) => {
+  return res.render ("signup");
 });
 
 
