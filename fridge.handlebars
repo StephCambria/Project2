@@ -1,0 +1,121 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <link href="./css/dist/output.css" rel="stylesheet" />
+   <link href="./css/dist/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <script>
+      $( function() {
+        $( "#sortable" ).sortable({
+          revert: true
+        });
+        $( "#draggable" ).draggable({
+          connectToSortable: "#sortable",
+          helper: "clone",
+          revert: "invalid"
+        });
+        $( "ul, li" ).disableSelection();
+      } );
+      </script>
+  </head>
+
+
+  <body class="m-0 p-0">
+    <nav class="navbar w-100 h-100 flex align-middle justify-evenly p-5 z-10">
+      <ul class="links-container">
+        <li class="link" id="home-link"><a href="/">Home</li>
+        <li class="link" id="fridge-link">
+          <a href="/fridge">Check the Fridge!</a>
+        </li>
+        <li class="link text-teal-500 ml-10 p-10" id="grocery-link">
+          <a href="/grocery">Grocery List</a>
+        </li>
+        <li class="link" id="recipe-link">
+          <a href="/dashboard">Cutting Board</a>
+        </li>
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <li class="link"><a href="/signup" id="logout-link">Logout</a></li>
+    {{else}}
+        <li class="link" id="signup-link"><a href="/signup">Sign In!</a></li>
+      {{/if}}
+      </ul>
+    </nav>
+
+    <br>
+    
+      <!-- Render the sub layout -->
+<main class="m-30 p-20">
+<div id="listContainer" class="flex flex-col">
+  <h3 class="font-semibold mt-10 p-5 text-3xl">Welcome back to your fridge!</h3>
+    <br>
+    <h3 class="font-semibold mt-10 p-5">Here you can view and sort through everything you currently have at home.</h3>
+  
+  <br>
+
+  <p class="font-medium mt-10 p-5">Click and drag each item to organize them.</p>
+
+  <br>
+
+    <h1 style="text-align:center; color:green;">
+        Add A Food Item
+    </h1>
+  
+    <!-- Form to add item -->
+    <form action="#" style="text-align:center;">
+  
+        <!-- Type of Element -->
+        <label for="type">
+            Add Element Type
+        </label>
+  
+        <input type="text" id="type" 
+            placeholder="Like: div, h1, li...." 
+            value="li" />
+        <br /><br />
+  
+        <!-- Text/Value for the element --->
+        <label for="value">
+            Add Element Value
+        </label>
+  
+        <input type="text" id="value" 
+            placeholder="i.e. Apples" 
+            value="ENTER A FOOD ITEM HERE" />
+        <br /><br />
+  
+        <!-- Submit the Form -->
+        <button type="button" 
+            onClick="addItem()">
+            Add
+        </button>
+    </form>
+
+    <br></br>
+
+      <div>
+        <ul id="sortable" class="box-border h-32 p-1 m-20">
+        <!-- New li elements will be added here -->
+        </ul>
+      </div>
+    
+  </main>
+
+  <br>
+
+    <footer>
+      
+    </footer>
+
+
+  <!-- Render script for logged in users only -->
+{{#if logged_in}}
+  <script src="/js/logout.js"></script>
+{{/if}}
+<script src="/js/fridge.js"></script>
+  </body>
+</html>
