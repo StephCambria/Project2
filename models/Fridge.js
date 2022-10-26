@@ -18,6 +18,9 @@ Fridge.init(
     description: {
       type: DataTypes.STRING,
     },
+    amount: {
+      type: DataTypes.STRING,
+    },
     fridge_id: {
       type: DataTypes.INTEGER,
       references: {

@@ -45,12 +45,36 @@
     </main>
     <footer>
       
-    </footer>
-  </div>
+
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
+        <div class="col-7">
+        <section class="">
+          <header class="text-center">
+            <h2 class="">
+              Click the button below to generate a random recipe!
+            </h2>
+          </header>
+          <div class="justify-center text-center">
+            <div class="col-8 mb-3">
+              <button class="" id="fetch-button">
+                Random Recipe
+              </button>
+            </div>
+            <ul></ul>
+          </div>
+        </section>
+      </div>
+        
+    </footer>
+  </div>
+  
   <script src="/js/logout.js"></script>
+  <script src="/js/recipe.js"></script>
   {{/if}}
+
+ 
+
   </body>
 </html>
