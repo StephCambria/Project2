@@ -21,10 +21,9 @@
         </li>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <li class="link"><a href="#" id="logout-link">Logout</a></li>
+        <li class="link"><a href="/signup" id="logout-link">Logout</a></li>
     {{else}}
-        <li class="link" id="login-link"><a href="/login">Login</a></li>
-        <li class="link" id="signup-link"><a href="/signup">Sign Up!</a></li>
+        <li class="link" id="signup-link"><a href="/signup">Sign In!</a></li>
       {{/if}}
       </ul>
     </nav>
@@ -32,7 +31,7 @@
 
       <container class="container">
       <div class="m-10 p-10">
-        <h2 class="text-3xl h2login">Login:</h2>
+        <h2 class="text-3xl h2login">Sign In:</h2>
         <div class="form">
           <label for="username">Username:</label>
           <input class="form-input" id="username-login"
@@ -53,7 +52,7 @@
         </div>
         
         <div class="btn-container">
-        <button class="font-semibold text-teal-500" id="login-btn" type="submit">Login</button>
+        <button class="font-semibold text-teal-500" id="signup-btn" type="submit">Sign In</button>
       </div>
     </container>
 
