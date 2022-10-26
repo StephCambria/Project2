@@ -35,7 +35,7 @@ Currently, What's in the Fridge? is a web-only application, and is setting the f
 * and of course, a mobile version!
 
 
-## Contributing
+## Contributors
 
 * [Stephanie Cambria](https://github.com/StephCambria)
 * [Tyler Porter](https://github.com/Mykneeisonfire)
