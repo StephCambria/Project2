@@ -61,16 +61,55 @@
 
   <br>
 
+<div class="p-20">
+    <h1 style="text-align:center; color:green;">
+        Add A Food Item
+    </h1>
+  
+    <!-- Form to add item -->
+    <form action="#" style="text-align:center;">
+  
+        <!-- Type of Element -->
+        <label for="type">
+            Generate List
+        </label>
+  
+        <input 
+            type="text" 
+            id="type" 
+            placeholder="" 
+            value="li"
+            readonly
+            />
+        <br /><br />
+  
+        <!-- Text/Value for the element --->
+        <label for="value">
+            Food Item
+        </label>
+  
+        <input type="text" 
+            id="value" 
+            placeholder="i.e. Apples" 
+            value="" />
+        <br /><br />
+  
+        <!-- Submit the Form -->
+        <button type="button" 
+            onClick="addItem()">
+            Add
+        </button>
+    </form>
+</div>
+
+    <br></br>
+
       <div>
         <ul id="sortable" class="box-border h-32 p-1 m-20">
-          <li id="listItem" class="ui-state-default">Item 1</li>
-          <li id="listItem" class="ui-state-default">Item 2</li>
-          <li id="listItem" class="ui-state-default">Item 3</li>
-          <li id="listItem" class="ui-state-default">Item 4</li>
-          <li id="listItem" class="ui-state-default">Item 5</li>
+        <!-- New li elements will be added here -->
         </ul>
       </div>
-    </div>
+    
   </main>
 
   <br>
@@ -84,6 +123,6 @@
 {{#if logged_in}}
   <script src="/js/logout.js"></script>
 {{/if}}
-
+<script src="/js/fridge.js"></script>
   </body>
 </html>
