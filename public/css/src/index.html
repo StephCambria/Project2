@@ -40,23 +40,27 @@
 
     <main class="m-30 p-20">
 
-      <div class="col-7">
-        <section class="">
-          <header class="text-center">
-            <h2 class="">
-              Click the button below to generate a random recipe!
-            </h2>
-          </header>
-          <div class="justify-center text-center">
-            <div class="col-8 mb-3">
-              <button class="" id="fetch-button">
-                Random Recipe
-              </button>
-            </div>
-            <ul></ul>
-          </div>
-        </section>
-      </div>
+      <container class="container">
+      <div class="m-10 p-10">
+        <h2 class="text-3xl h2login">Login:</h2>
+        <div class="form">
+          <label for="username">Username:</label>
+          <input class="form-input" id="username-login"
+            name="username"
+            type="text"
+            placeholder="Enter Username"
+            id="username-field"
+          />
+        </div>
+        <div class="form">
+          <label for="password">Password:</label>
+          <input class="form-input border-2" id="password-login"
+            name="password"
+            type="password"
+            placeholder="Enter Password"
+            id="password-field"
+          />
+        </div>
         
         <div class="btn-container">
         <button class="font-semibold text-teal-500" id="login-btn" type="submit">Login</button>
