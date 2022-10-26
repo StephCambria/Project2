@@ -39,9 +39,9 @@
         </li>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <li class="link"><a href="/signup" id="logout-link">Logout</a></li>
+        <li class="link"><a href="/" id="logout-link">Logout</a></li>
     {{else}}
-        <li class="link" id="signup-link"><a href="/signup">Sign In!</a></li>
+        <li class="link" id="signup-link"><a href="/login">Login</a></li>
       {{/if}}
       </ul>
     </nav>
@@ -63,20 +63,55 @@
   
     <br>
   
-        <div>
-          <ul id="sortable" class="box-border h-32 p-1 m-20">
-            <li id="listItem" class="ui-state-default">Item 1</li>
-            <li id="listItem" class="ui-state-default">Item 2</li>
-            <li id="listItem" class="ui-state-default">Item 3</li>
-            <li id="listItem" class="ui-state-default">Item 4</li>
-            <li id="listItem" class="ui-state-default">Item 5</li>
-          </ul>
-        </div>
-      </div>
-    </main>
+<div class="p-20">
+    <h1 style="text-align:center; color:green;">
+        Add A Food Item
+    </h1>
   
-    <br>
+    <!-- Form to add item -->
+    <form action="#" style="text-align:center;">
+  
+        <!-- Type of Element -->
+        <label for="type">
+            Generate List
+        </label>
+  
+        <input 
+            type="text" 
+            id="type" 
+            placeholder="" 
+            value="li"
+            readonly
+            />
+        <br /><br />
+  
+        <!-- Text/Value for the element --->
+        <label for="value">
+            Food Item
+        </label>
+  
+        <input type="text" 
+            id="value" 
+            placeholder="i.e. Apples" 
+            value="" />
+        <br /><br />
+  
+        <!-- Submit the Form -->
+        <button type="button" 
+            onClick="addItem()">
+            Add
+        </button>
+    </form>
+</div>
 
+    <br></br>
+
+      <div>
+        <ul id="sortable" class="box-border h-32 p-1 m-20">
+        <!-- New li elements will be added here -->
+        </ul>
+      </div>
+    
   </main>
 
   <br>
@@ -90,6 +125,7 @@
 {{#if logged_in}}
   <script src="/js/logout.js"></script>
 {{/if}}
-
+<script src="/js/grocery.js"></script>
   </body>
+
 </html>

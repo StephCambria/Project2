@@ -39,9 +39,9 @@
         </li>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <li class="link"><a href="/signup" id="logout-link">Logout</a></li>
+        <li class="link"><a href="/" id="logout-link">Logout</a></li>
     {{else}}
-        <li class="link" id="signup-link"><a href="/signup">Sign In!</a></li>
+        <li class="link" id="signup-link"><a href="/login">Login</a></li>
       {{/if}}
       </ul>
     </nav>
@@ -61,6 +61,7 @@
 
   <br>
 
+<div class="p-20">
     <h1 style="text-align:center; color:green;">
         Add A Food Item
     </h1>
@@ -70,22 +71,27 @@
   
         <!-- Type of Element -->
         <label for="type">
-            Add Element Type
+            Generate List
         </label>
   
-        <input type="text" id="type" 
-            placeholder="Like: div, h1, li...." 
-            value="li" />
+        <input 
+            type="text" 
+            id="type" 
+            placeholder="" 
+            value="li"
+            readonly
+            />
         <br /><br />
   
         <!-- Text/Value for the element --->
         <label for="value">
-            Add Element Value
+            Food Item
         </label>
   
-        <input type="text" id="value" 
+        <input type="text" 
+            id="value" 
             placeholder="i.e. Apples" 
-            value="ENTER A FOOD ITEM HERE" />
+            value="" />
         <br /><br />
   
         <!-- Submit the Form -->
@@ -94,6 +100,7 @@
             Add
         </button>
     </form>
+</div>
 
     <br></br>
 

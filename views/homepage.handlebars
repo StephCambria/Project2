@@ -23,9 +23,9 @@
         </li>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <li class="link"><a href="/signup" id="logout-link">Logout</a></li>
+        <li class="link"><a href="/" id="logout-link">Logout</a></li>
     {{else}}
-        <li class="link" id="signup-link"><a href="/signup">Sign In!</a></li>
+        <li class="link" id="signup-link"><a href="/login">Login</a></li>
       {{/if}}
       </ul>
     </nav>
