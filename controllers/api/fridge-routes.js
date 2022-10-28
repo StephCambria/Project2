@@ -1,21 +1,23 @@
-const router = require('express').Router();
-const { Fridge } = require('../../models');
-const withAuth = require('../../utils/auth');
+const router = require("express").Router();
+const { Fridge } = require("../../models");
+const withAuth = require("../../utils/auth");
 
-router.post('/', withAuth, async (req, res) => {
+router.post("/", withAuth, async (req, res) => {
+  const body = req.body;
+
   try {
     const newFridge = await Fridge.create({
-      ...req.body,
+      ...body,
       user_id: req.session.user_id,
     });
 
-    res.status(200).json(newFridge)
+    res.status(200).json(newFridge);
   } catch (err) {
     res.status(400).json(err);
   }
 });
 
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete("/:id", withAuth, async (req, res) => {
   try {
     const fridgeData = await Fridge.destroy({
       where: {
@@ -25,7 +27,7 @@ router.delete('/:id', withAuth, async (req, res) => {
     });
 
     if (!fridgeData) {
-      res.status(404).json({ message: 'Nothing found with this id!' });
+      res.status(404).json({ message: "Nothing found with this id!" });
       return;
     }
 

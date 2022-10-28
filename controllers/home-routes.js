@@ -12,7 +12,7 @@ router.get("/", withAuth, async (req, res) => {
     //const user = userData.get({ plain: true });
     const user = userData.map((user) => user.get({ plain: true }));
 
-    res.render("login", {
+    res.render("homepage", {
       user,
       logged_in: req.session.logged_in,
     });
@@ -31,7 +31,16 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
-//-----------------------------------------
+router.get("/signup", (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect("/");
+    return;
+  }
+
+  res.render("signup");
+});
+
+//=================================
 
 
 router.get("/", async (req, res) => {

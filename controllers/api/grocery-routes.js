@@ -3,9 +3,11 @@ const { Grocery } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
+  const body = req.body;
+
     try {
       const newGrocery = await Grocery.create({
-        ...req.body,
+        ...body,
         user_id: req.session.user_id,
       });
 
