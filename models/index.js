@@ -24,19 +24,19 @@ User.hasMany(Food, {
 //=================================
 
 // Recipe has...
-Recipe.belongsToMany(Food, {
+Recipe.belongsTo(Food, {
   foreignKey: "food_id",
 });
 
-Recipe.belongsToMany(User, {
+Recipe.belongsTo(User, {
   foreignKey: "user_id",
 });
 
-Recipe.belongsToMany(Fridge, {
+Recipe.belongsTo(Fridge, {
   foreignKey: "fridge_id",
 });
 
-Recipe.belongsToMany(Grocery, {
+Recipe.belongsTo(Grocery, {
   foreignKey: "grocery_id",
 });
 
