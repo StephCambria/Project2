@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const { response } = require("express");
 const { User } = require("../../models");
 
 router.post("/", async (req, res) => {
@@ -21,7 +22,7 @@ router.post("/", async (req, res) => {
     });
 
     req.session.save(() => {
-      req.session.userId = newUser.id;
+      req.session.user_id = newUser.id;
       req.session.username = newUser.username;
       req.session.loggedIn = true;
 
@@ -29,7 +30,7 @@ router.post("/", async (req, res) => {
     });
   } catch (err) {
     console.log(err);
-    res.status(500).json({ message: "Invalid entries or server error" });
+    res.status(500).json({ message: response.statusMessage });
   }
 });
 
@@ -54,7 +55,7 @@ router.post("/login", async (req, res) => {
     }
 
     req.session.save(() => {
-      req.session.userId = user.id;
+      req.session.user_id = user.id;
       req.session.username = user.username;
       req.session.loggedIn = true;
 
@@ -67,7 +68,7 @@ router.post("/login", async (req, res) => {
 });
 
 router.post("/logout", (req, res) => {
-  if (req.session.logged_in) {
+  if (req.session.loggedIn = true) {
     req.session.destroy(() => {
       res.status(204).end();
     });

@@ -10,11 +10,6 @@ const foodRoutes = require("./food-routes");
 // User routes
 router.use("/user", userRoutes);
 
-router.get("/user", async (req, res) => {
-  const users = await User.findAll();
-  res.join(users);
-});
-
 // Fridge routes
 router.use("/fridge", fridgeRoutes);
 
