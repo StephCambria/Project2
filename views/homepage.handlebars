@@ -22,8 +22,8 @@
           <a href="/dashboard">Cutting Board</a>
         </li>
         <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <li class="link"><a href="/" id="logout-link">Logout</a></li>
+        {{#if loggedIn}}
+        <li class="link" id="logout-link">Logout</li>
     {{else}}
         <li class="link" id="login-link"><a href="/login">Login</a></li>
         <li class="link" id="signup-link"><a href="/signup">Sign Up</a></li>
@@ -40,7 +40,7 @@
   </div>
 
   <!-- Render script for logged in users only -->
-  {{#if logged_in}}
+  {{#if loggedIn}}
   <script src="/js/logout.js"></script>
   {{/if}}
   </body>
