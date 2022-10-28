@@ -3,7 +3,7 @@
 
 <img width="1666" alt="Screen Shot 2022-10-24 at 6 20 01 PM" src="https://user-images.githubusercontent.com/107421370/197640746-e939b326-ee48-4496-a1b2-f677501573b5.png">
 
-[Deployed Site!](https://whatsin-thefridge.herokuapp.com/)
+[Deployed Site!](https://what-s-in-the-fridge.herokuapp.com/)
 
 ## Table of Contents
 1. [Description](#description)
@@ -21,7 +21,7 @@ We all have to eat. Why not take the stress out of figuring out what to eat and 
 
 ## Installation
 
-This application is deployed live through [Heroku!](https://whatsin-thefridge.herokuapp.com/)
+This application is deployed live through [Heroku!](https://what-s-in-the-fridge.herokuapp.com/)
 
 ## Usage
 
