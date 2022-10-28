@@ -2,21 +2,25 @@ const router = require("express").Router();
 const { User } = require("../models");
 const withAuth = require("../utils/auth");
 
-router.get("/", withAuth, async (req, res) => {
+// GET a single logged in user
+router.get("/user/:id", withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
-    const userData = await User.findAll ({
+    const userData = await User.findByPk(req.params.id, {
       attributes: { exclude: ["password"] },
     });
 
-    //const user = userData.get({ plain: true });
-    const user = userData.map((user) => user.get({ plain: true }));
-
-    res.render("homepage", {
-      user,
-      logged_in: req.session.logged_in,
-    });
+    if (userData) {
+      const user = userData.get({ plain: true });
+      res.render("login", {
+        user: user,
+        session: req.session,
+      });
+    } else {
+      res.status(404).end();
+    }
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
@@ -42,34 +46,28 @@ router.get("/signup", (req, res) => {
 
 //=================================
 
-
 router.get("/", async (req, res) => {
-  return res.render ("homepage");
-});
-
-router.get("/home", async (req, res) => {
   return res.render("homepage");
 });
 
 router.get("/fridge", async (req, res) => {
-  return res.render ("fridge");
+  return res.render("fridge");
 });
 
 router.get("/grocery", async (req, res) => {
-  return res.render ("grocery");
+  return res.render("grocery");
 });
 
 router.get("/dashboard", async (req, res) => {
-  return res.render ("dashboard");
+  return res.render("dashboard");
 });
 
 router.get("/login", async (req, res) => {
-  return res.render ("login");
+  return res.render("login");
 });
 
 router.get("/signup", async (req, res) => {
-  return res.render ("signup");
+  return res.render("signup");
 });
-
 
 module.exports = router;
