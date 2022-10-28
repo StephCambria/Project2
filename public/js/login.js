@@ -1,8 +1,8 @@
 const loginFormHandler = async function(event) {
   event.preventDefault();
 
-  const username = document.querySelector("#username-login").value.trim();
-  const password = document.querySelector("#password-login").value.trim();
+  const username = document.querySelector("#username-login");
+  const password = document.querySelector("#password-login");
 
   const response = await fetch ("/api/user/login", {
     method: "POST",
@@ -13,12 +13,11 @@ const loginFormHandler = async function(event) {
     headers: { "Content-Type": "application/json" },
   });
 
-  response.json().then(data => console.log(data));
 
   if (response.ok) {
     document.location.replace("/fridge");
   } else {
-    alert("Failed to login");
+    alert(response.statusText);
   }
 };
 

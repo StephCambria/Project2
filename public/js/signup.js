@@ -1,8 +1,8 @@
 const signupFormHandler = async function(event) {
     event.preventDefault();
 
-    const username = document.querySelector("#username-signup").value.trim();
-    const password = document.querySelector("#password-signup").value.trim();
+    const username = document.querySelector("#username-signup");
+    const password = document.querySelector("#password-signup");
 
     const response = await fetch ("/api/user", {
         method: "POST",
@@ -13,12 +13,12 @@ const signupFormHandler = async function(event) {
         headers: { "Content-Type": "application/json" },
     });
 
-    const responseData = await response.json();
+    response.json().then(data => console.log(data));
 
     if (response.ok) {
         document.location.replace("/fridge");
     } else {
-        alert("Failed to sign up");
+        alert(response.statusText);
     }
 };
 
