@@ -1,7 +1,7 @@
 addItem = () => {
 
     // Get type of element from form
-    let type = li;
+    // let type = document.getElementById("type").value;
     
     // Get the text/value for the tag
     // from the form
@@ -9,7 +9,7 @@ addItem = () => {
     
     // createElement() is used for
     // creating a new element
-    type = document.createElement(type);
+    let type = document.createElement(li);
     
     // Use value as textnode in this example
     type.appendChild(document.createTextNode(value));
