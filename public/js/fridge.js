@@ -9,7 +9,7 @@ addItem = () => {
     
     // createElement() is used for
     // creating a new element
-    let type = document.createElement(li);
+    let type = document.createElement("li");
     
     // Use value as textnode in this example
     type.appendChild(document.createTextNode(value));
