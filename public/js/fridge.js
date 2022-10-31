@@ -1,7 +1,7 @@
 addItem = () => {
 
     // Get type of element from form
-    let type = document.getElementById("type").value;
+    let type = li;
     
     // Get the text/value for the tag
     // from the form
